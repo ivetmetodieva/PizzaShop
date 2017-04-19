@@ -1,8 +1,8 @@
 <?php
-abstract class Product{
-	private $name;
+abstract class Product extends ABaseProduct{
+
+//TODO should see the case with lists and arrays
 	private $ingredients = array();
-	private $price;
 	private $weight;
 	private $image;//the path of the picture
 	
@@ -14,14 +14,23 @@ abstract class Product{
 		$this->image = $pImage;
 	}
 	
-	public function get_name(){
-		return $this->name;
+	//@override from parent
+	public function set_id($new_id){
+		 $this->name = $new_id;
 	}
-	
+	//@override from parent
 	public function set_name($new_name){
 		$this->name = $new_name;
 	}
 	
+		//@override from parent
+	public function set_price($new_price){
+		$this->price = $new_price;
+	}
+	
+	public function get_name(){
+		return $this->name;
+	}
 	public function get_ingredients(){
 		return $this->ingredients;
 	}
@@ -32,10 +41,6 @@ abstract class Product{
 	
 	public function get_price(){
 		return $this->price;
-	}
-	
-	public function set_price($new_price){
-		$this->price = $new_price;
 	}
 	
 	public function get_weigth(){
