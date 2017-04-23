@@ -1,6 +1,6 @@
 <?php
 class User{
-	//ID logic?
+	//ID logic 
 	private $id;
 	private $firstName;
 	private $secondName;
