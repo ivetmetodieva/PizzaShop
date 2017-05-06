@@ -110,7 +110,7 @@
             </div>
           </div>
           
-          <input type="submit" />
+          <input type="submit" name="register" alt="Get Started" value=""/>
 		  <!-- I removed the button here because it was blocking the php file...sorry Ivet
 		  <!-- id="btn" class="button button-block"/>Get Started</button> -->
           
@@ -121,20 +121,20 @@
         <div id="login">   
           <h1>Welcome Back!</h1>
           
-          <form action="/" method="post">
+          <form action="login.php" method="post">
           
             <div class="field-wrap">
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="on"/>
+            <input id="loginEmail" type="email" name="loginEmail" required autocomplete="on"/>
           </div>
           
           <div class="field-wrap">
             <label>
               Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input id="loginPassword" type="password" name="loginPassword" required autocomplete="off"/>
           </div>
           
        
@@ -159,9 +159,10 @@
 			  </div>
 
 			</div>
-			
+			<!--the thing below was breaking php logic
           <button class="button button-block"/>Log In</button>
-          
+		  -->
+          <input type="submit"  name="login" alt="Log in"/>
           </form>
 
         </div>

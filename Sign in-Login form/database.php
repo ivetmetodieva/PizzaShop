@@ -54,9 +54,19 @@ if ($res) {
 //Uncomment the below to see results for creating the user	
    // echo "Success ,created user !!";
 } else {
-    echo "Error: " . $sql . "<br>" . $con->error;
+    echo "Error this profile is already taken ";
 }
-
+	}
+	
+	public function hasProfile($email,$password){
+		//select * from users where email = 'admin@admin.com' and password='123' LIMIT 1
+		$sql = "select * from `users` where `email`='$email' and `password`='$password' limit 1";
+		$result = $this->connection->query($sql);
+		if ($result){
+			echo "Login success";
+		}else{
+			echo "Wrong email or password.Please try again";
+		}
 	}
 	//the result of the search or null
 	public function results(){
