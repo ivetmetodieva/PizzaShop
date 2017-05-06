@@ -1,5 +1,4 @@
 <?php
-include("user.php");
 //Singleton implementation of database connection
 class Database{
 	private $host = "127.0.0.1";
@@ -52,7 +51,8 @@ class Database{
 VALUES ('$first', '$second', '$pass', '$address', '$phone', '$email', '$empty_meals')";
 		$res =$this->connection->query($sql);
 if ($res) {
-    echo "kato da stiga go tuka";
+//Uncomment the below to see results for creating the user	
+   // echo "Success ,created user !!";
 } else {
     echo "Error: " . $sql . "<br>" . $con->error;
 }

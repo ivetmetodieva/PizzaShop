@@ -54,21 +54,21 @@
         <div id="signup">   
           <h1>Sign Up for Free</h1>
           
-          <form action="/" method="post">
+          <form action="createUser.php" method="post">
           
           <div class="top-row">
             <div class="field-wrap">
               <label>
                 First Name<span class="req">*</span>
               </label>
-              <input id="firstName" type="text" required autocomplete="off" />
+              <input id="firstName" type="text"  name="firstName" required autocomplete="off" />
             </div>
         
             <div class="field-wrap">
               <label>
                 Last Name<span class="req">*</span>
               </label>
-              <input id="lastName" type="text"required autocomplete="off"/>
+              <input id="lastName" type="text" name="lastName" required autocomplete="off"/>
             </div>
           </div>
 
@@ -76,21 +76,21 @@
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input id="email" type="email"required autocomplete="off"/>
+            <input id="email" type="email" name="email" required autocomplete="off"/>
           </div>
           
 		  <div class="field-wrap">
             <label>
               Address<span class="req">*</span>
             </label>
-            <input id="adress" type="tex"required autocomplete="off"/>
+            <input id="adress" type="tex" name="address"required autocomplete="off"/>
           </div>
 		  
 		  <div class="field-wrap">
             <label>
               Telephone<span class="req">*</span>
             </label>
-            <input id="telephone" type="tex"required autocomplete="off" maxlength="10"/>
+            <input id="telephone" type="tex" name="telephone" required autocomplete="off" maxlength="10"/>
           </div>
 		  
          <div class="pass-row">
@@ -98,7 +98,7 @@
               <label>
                 Password<span class="req">*</span>
               </label>
-              <input id="password" type="password" required autocomplete="off" />
+              <input id="password" type="password" name="password" required autocomplete="off" />
             </div>
         
             <div class="field-wrap">
@@ -110,7 +110,9 @@
             </div>
           </div>
           
-          <button id="btn" class="button button-block"/>Get Started</button>
+          <input type="submit" />
+		  <!-- I removed the button here because it was blocking the php file...sorry Ivet
+		  <!-- id="btn" class="button button-block"/>Get Started</button> -->
           
           </form>
 

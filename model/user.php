@@ -1,13 +1,11 @@
 <?php
 class User{
-	//ID logic 
-	private $id;
+
 	private $firstName;
 	private $secondName;
 	private $email;
 	private $phone;
 	private $address;
-	private $id;
 	private $password;
 	private $order;
 	
@@ -17,20 +15,7 @@ class User{
 		$this->email = $u_email;
 		$this->phone = $u_phone;
 		$this->address = $u_address;
-		//logic for id ?
 		$this->password = $u_password;
-	}
-	
-	public function __construct($u_fistname,$u_secondname,$u_email,$u_phone,$u_address,$u_password,$u_order){
-		$this->firstName = $u_fistname;
-		$this->secondName =$u_secondname;
-		$this->email = $u_email;
-		$this->phone = $u_phone;
-		$this->address = $u_address;
-		//logic for id ?
-		$this->password = $u_password;
-		$this->order = $u_order;
-		
 	}
 	
 	public  function set_order($new_order){
@@ -80,14 +65,7 @@ class User{
 	public function get_address(){
 		return $this->address;
 	}
-
-	public function set_id($new_id){
-		$this->id= $new_id;
-	}
 	
-	public function get_id(){
-		return $this->id;
-	}
 	
 	public function set_password($new_pass){
 		$this->password = $new_pass;
@@ -98,5 +76,4 @@ class User{
 	}
 	
 }
-
 ?>
